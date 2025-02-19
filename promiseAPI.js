@@ -2,8 +2,7 @@ Promise APIs
 
 1. Promise.all
 Ex- When u want to create parallel api calls and get the results
-   like there are 10 user id and you have a api calls for user info and   create
-    parallel api calls and get the results
+  
 - Handle mutiple api calls togeteher
 
 - Here promise.all will take an array of promises as input
@@ -36,8 +35,8 @@ it will thrown as result
 
 - Not even wait for other promise to get succesful or rejected
 
-THREFORE Promise.all is kind of all or none
--FAIL FAST- if one fails gives the result
+// THREFORE Promise.all is kind of all or none
+// -FAIL FAST- if one fails gives the result
 
 
 
@@ -56,7 +55,7 @@ P.allSettled([p1, p2, p3])- p2 gets rejected
              Output
 After 3s[val1,error,val3]
 
--THEREFORE- It wait for all then gives the result
+// -THEREFORE- It wait for all then gives the result
 
 
 3. Promise.race -the first settled promise
@@ -82,8 +81,8 @@ Promise.race([p1 , p2, p3]) -anyone will winns first will be the winner
                Output 
    after 2s error will be thrown
    
--THEREFORE WILL return result of first settled promise
--Will not wait for other promise to get settled
+// -THEREFORE WILL return result of first settled promise
+// -Will not wait for other promise to get settled
 
 4. Promise.any -seking for first settled success    
 
@@ -118,9 +117,9 @@ Promise.any([p1, p2 ,p3])
 
  Output 
  [erro1,erro2,error3]
-
-If all of them fails then return Agggregate error : all the promise were rejected
-error of detailed reason
+// THEREFORE -seking for first settled success   
+// If all of them fails then return Agggregate error : all the promise were rejected
+// error of detailed reason
 
 ////////////////////////////////////
 
