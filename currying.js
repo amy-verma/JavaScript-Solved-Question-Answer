@@ -14,7 +14,6 @@ Your function is an example of currying, where multiple arguments are taken one 
 ✅ Currying: The process of breaking down a function with multiple parameters into a series of unary functions.
 ✅ Closures: Each function retains access to the variables from its outer function.
 
-Let me know if you need further clarification! 🚀
 
 
 // Higher-order function returning another function
