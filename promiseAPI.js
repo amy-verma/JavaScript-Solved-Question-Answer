@@ -58,7 +58,7 @@ After 3s[val1,error,val3]
 // -THEREFORE- It wait for all then gives the result
 
 
-3. Promise.race -the first settled promise
+3. Promise.race -the first settled promise either rejected or resolved
  
 Promise.race([p1 , p2, p3]) -anyone will winns first will be the winner
               3s   1s  2s
@@ -82,9 +82,10 @@ Promise.race([p1 , p2, p3]) -anyone will winns first will be the winner
    after 2s error will be thrown
    
 // -THEREFORE WILL return result of first settled promise
+//and in case of failure- if anyone fails then also the result will be thrown as error in P3
 // -Will not wait for other promise to get settled
 
-4. Promise.any -seking for first settled success    
+4. Promise.any -seking for first settled success    i:e success seeking api
 
 Promise.any([p1, p2 ,p3]) -will wait for first promise to get succesful
              3s  1s   2s
@@ -119,7 +120,7 @@ Promise.any([p1, p2 ,p3])
  [erro1,erro2,error3]
 // THEREFORE -seking for first settled success   
 // If all of them fails then return Agggregate error : all the promise were rejected
-// error of detailed reason
+// error of detailed reason [error1,error2,eror3]
 
 ////////////////////////////////////
 

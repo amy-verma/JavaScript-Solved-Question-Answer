@@ -1,7 +1,7 @@
 1. Js has a default behaviour i:e  prototypal behaviour
 2.  Due to this behaviour we have this keeyword working.
 3. Inside arrow function we dont't have access to this keyword is due to prototype come there.
-4. Protype is giving access to "new","classes,"constructor" keyword and "prototypal inheritence"
+4. Protype is giving access by "new","classes,"constructor" keyword and "prototypal inheritence"
 5. Inside prototype we get methods i:e forEacg,map,pop,push...and then again at last we get prototype i:e call
    inheritence and there we get constructor,toString,valueOf
    First level Prototype is-  Array->Object->null

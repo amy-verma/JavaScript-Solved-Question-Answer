@@ -2,7 +2,9 @@
 // - should be called after some time interval
 // - after pressing and after some millisecond it will be called
 
-
+// - It waits for sometime before running a function
+// - if you call the function again before time is up it resets a timer
+// - the functiin runs only after there are no more calls for a settime
 
 <input type="text" onkeyup="betterFunction()" />
 
