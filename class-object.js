@@ -1,4 +1,58 @@
-                              CLASS in JS 
+1. // class syntax;
+
+class Person{
+
+}
+const person=new Person()
+console.log(person)
+// ---------------------------------------------------
+
+// 2. Class Instantiation
+
+// Instantiate class means creating an object from a class.We need the keywod new and we call the name 
+// of the class after the word new
+
+class Person{
+
+}
+const person=new Person()
+console.log(person)//Person {}
+
+// ----------------------------------------------------------------------
+
+// 3. Class Constructor
+// The constructor is a built in function which allow us to create blueprint for our  object .
+// The constructor function starts with a keyword constructor followed by the parenthesis.
+// Inside parenthesis we pass the properties of the object as parameter
+// We use this keyword to attach the constructor parameter with the class
+
+class Person{
+    constructor(firstname,lastname,age){//we can more properties to the class
+        console.log(this)
+        this.firstname=firstname
+        this.lastname=lastname
+        this.age=age
+    }
+}
+const person1=new Person("amit","varma",28)
+const person2=new Person("sumit","verma",31)
+console.log(person1)
+console.log(person2)
+
+// --------------------------------------------------------------------------
+
+// 4. Default values with constructor
+// The constructor function properties may have a default value like other regular functions.
+
+
+
+
+
+
+
+
+
+CLASS in JS 
 
 class is a program code template for creating object
  Those obbject will have same state(variable) & bahaviour(function) inside it
