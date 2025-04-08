@@ -1,6 +1,6 @@
 // Memoization
-// - Memoization is an optimization technizue that can be used to reduce time-consuming calculation by saving previous input to 
-//  something called cache and return the result from it 
+// - Memoization is an optimization technizue that can be used to reduce time-consuming calculation by saving previous
+//  input to something called cache and return the result from it 
 
 // Is an optimization technique that speeds up function execution by storing the results of expensive function calls
 //  and returing the cached result when the same input occur again
