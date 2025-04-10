@@ -1,10 +1,11 @@
 // Q. What us deboucing?
 // - Is a technique used in programming to limit the rate at which function is executed.
-// - It is super useful when you are dealing with events that can fire rapidly like scroll,resize,keypress or input.  
+// - It is super useful when you are dealing with events that can fire rapidly like scroll,resize,keypress
+//  or input.  
 
 // What it does
-// It ensure that the function is only called after certain delay, an donly if no new event has occured in that delay 
-// period
+// It ensure that the function is only called after certain delay, and only if no new event has occured 
+// in that delay period
 
 // -------------------------
 
