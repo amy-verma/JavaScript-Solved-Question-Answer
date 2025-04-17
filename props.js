@@ -1,7 +1,7 @@
 // What are props 
 // 1. Props stand for properties
 // 2. Props are used to transfer data from one componenet to another. 
-// 3. Props are react only. we cannot change the value of a prop 
+// 3. Props are read only. we cannot change the value of a prop 
 // 4. Prop are just like a function in JS
 //5. They make React components dynamic and reusable.
 

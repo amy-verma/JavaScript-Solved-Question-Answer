@@ -52,3 +52,19 @@ function x(){
     },1000)
 }
 x()
+
+// --------------------------------------------------------------
+
+let inervalId;
+function x(){
+    inervalId= setInterval(()=>{
+        console.log('Hello Worls')
+    },1000)
+}
+
+x();
+
+setTimeout(()=>{
+    clearInterval(inervalId)
+    console.log("timer stopped")
+},5000)
