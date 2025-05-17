@@ -136,3 +136,61 @@ promise
  .then (() => console.log('Chained then'));
 
 console.log("End of script");
+
+// -----------------------------------------------------------------------------------
+// Possible Interview Questions & Answers:
+
+// 2. Q: What does .then() return?
+// A .then() returns a new Promise. It can be used to chain multiple asynchronous operations
+// -  Whatever you return from a .then() will be passed to the next .then() in the chain.
+
+// 3. Q: What happens if there's an error in any .then() block?
+// If any .then() throws an error or a rejected promise is returned, it will skip all subsequent
+// //  .then() blocks and go to the .catch().
+
+// 5. Q: What is the purpose of setTimeout inside the Promise?
+// It simulates an asynchronous task, such as an API call. It's commonly used to delay execution 
+// or mimic async behavior in demos
+
+// INTERVIEW QUESTIONS (Advanced-Level)
+// 1. Q: Is the .then() chain synchronous or asynchronous? How does the JavaScript event loop handle it?
+// A. .then() chain is  asyncronous.Even though it looka like a sync then .then() callback are queued
+// in the microtask que and they execute after the current statck is empty
+// The setTimeout callback is placed in the macrotask queue, so its execution is slightly delayed, then 
+// .then() gets scheduled after resolution.
+
+// 3. Q: Can you explain promise chaining and how values are passed between .then() blocks?
+// A:
+// Yes. In promise chaining:
+// Each .then() returns a new Promise.
+// The value returned from one .then() is passed as input to the next one.
+// If a .then() doesn't return anything, the next .then() gets undefined.
+
+// 5. Q: Is setTimeout inside a promise good practice for real-world async?
+// Not really setTimeoutis useful for mocking async behviour during development or interviews.
+// -In the real world apps async operatin like  (like fetch or DB queries) should be used.
+
+// 6. Q: How would you handle multiple asynchronous promises if you had more than one?
+// 1. Promise.all()         =>waits for all promise to resolve(fail fast if any fail)
+// 2. Promise.allSettled()  =>waits for all the promise to get selttled(never fails)
+// 3. Promise.race()        =>returns first settled result(resolved or rejected)
+// 4. Promise.any()         => Returns first settled(ignore rejection)
+
+// 7. Q: How is error propagation handled in promise chains?
+// - If an error is thrown a promise is rejectd,it bubbled down the chain until the first .catch() 
+// catch it.If no catch is found it becomes unhandled promise rejection
+
+
+// Q: Why does .then() return a new Promise?
+// - .the() return a new Promise so that you can chain multiple async operation and handle their 
+// results or error sequentially
+
+// It gives you full control over what to do next — whether that’s returning a transformed value,
+//  waiting for another async task, or handling errors.
+
+// Benefits of .then() returning a new Promise:
+
+// 1. Chaining: You can keep adding .then() blocks one after another.
+// 2. Async control: You can return new Promises and wait for them.
+// 3. Error handling: One .catch() at the end handles errors from any .then().
+

@@ -15,8 +15,6 @@ z()
 //that closure enclosed function along with its lexical scope that was returned and it was put inside z so 
 //when you execute z somewhere else in your program it still remembers a i:e the reference to a and it prints it
 
-
-
 //function along its lexical scope bundled together forms its closure
 
 //Closure is the combination of a function and its lexical scope bundled together with reference 

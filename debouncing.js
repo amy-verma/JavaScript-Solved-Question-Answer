@@ -29,7 +29,7 @@ const getData=()=>{
     console.log("Fetching data",counter++)
 }
 
-function doSomething(fn,d){
+function debounce(fn,d){
     let timer;
     return function(...args){
         if(timer) clearTimeout(timer)
@@ -40,4 +40,4 @@ function doSomething(fn,d){
 }
 
 
-const betterFunction=doSomething(getData,1000)
+const betterFunction=debounce(getData,2000)
