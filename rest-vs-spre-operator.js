@@ -85,7 +85,7 @@ getNames(...names)//spread operator
 //     age:28,
 //     hobby:["football"]
 // }
-// const {age,...rest}=student;//in case of object using rest operator
+// const {age,...rest}=student;//in case of object using rest operator(to combine)
 // console.log(rest)
 // // -------------------
 // SPREAD , change the age

@@ -114,12 +114,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 }).catch((error)=>{
     console.log(error)
 })
-
-
-
-
-
-
+// ------------------------
 
 setTimeout(() => console.log('setTimeout'),0);
 

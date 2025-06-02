@@ -7,14 +7,9 @@ function add(a){
 }
 console.log(add(2)(3)(4))
 
-1️⃣ Currying
-Your function is an example of currying, where multiple arguments are taken one at a time instead of all at once.
-
 ////////////////////////////////////////////////////////////////////////
 ✅ Currying: The process of breaking down a function with multiple parameters into a series of unary functions.
 ✅ Closures: Each function retains access to the variables from its outer function.
-
-
 
 // Higher-order function returning another function
 const higherOrder = n => {
@@ -26,7 +21,87 @@ const higherOrder = n => {
     }
     return doSomething;
   }
-  
   // Calling the function
   console.log(higherOrder(2)(3)(10));
   
+  // Why Use Currying?
+  // 1. Reusability: You can partially apply a function.
+  // 2. Cleaner code in functional pipelines or libraries like Lodash, Ramda, React (HOCs), etc.
+  // 3. Helps in function composition and functional programming.
+
+// Q. What is currying?
+// A. Currying is a function that takes one argument at a time and returns new function
+// - Basically currying does not call a function . It just transforms a function
+// - They are constructed by chaining closures by immediately returning their inner functions
+//  simultaneously.
+
+// Q. Why should we use currying?
+// A. It helps to avoid passing the same variable again and again
+//   - It makes the function pure which makes it expose to less errors and side effects
+// ---------------------------
+Question 1. sum(2)(3)(4)(5)
+
+// sum(2)(6)(1)
+
+function sum(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
+    }
+}
+console.log(sum(2)(3)(0))
+// -----------------------------------------
+// Question 2. 
+// evaluate("sum")(4)(2)=>6
+// evaluate("multiply")(4)(2)=>8
+// evaluate("divide")(4)(2)=>2
+// evaluate("subtratct")(4)(2)=>2
+
+
+// evaluate("sum")(4)(2)=>6
+// evaluate("multiply")(4)(2)=>8
+// evaluate("divide")(4)(2)=>2
+// evaluate("subtract")(4)(2)=>2
+
+function evaluate(operation){
+    return function(a){
+        return function(b){
+            if(operation==="sum") return a+b;
+            else if(operation==="multiply") return a*b;
+            else if(operation==="divide") return a/b;
+            else if(operation==="subtract") return a-b;
+            else return "Invalid Operation"
+        }
+    }
+}
+let mul=evaluate("multiply")
+console.log(mul(2)(5))
+// console.log(evaluate("sum")(2)(3))
+// console.log(evaluate("multiply")(2)(3))
+// -----------------------------------------------
+
+Question 3.Infinite Currying 
+sum(1)(2)(3)...(n)
+
+function sum(a){
+    return function(b){
+        if (b) return sum(a+b);
+            return a;
+    }
+}
+console.log(sum(2)(3)(4)(2)())
+// ------------------------------
+Question 4. Currying vs Partial Application
+Question 5. Manupulationg DOM
+
+    <h1 id="heading">Amit</h1>
+
+
+function updateElementText(id){
+    return function(content){
+        document.querySelector("#"+id).textContent=content;
+    }
+}
+const updateHeader=updateElementText("heading")
+updateHeader("Hello Amit")
