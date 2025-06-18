@@ -83,3 +83,100 @@ obj2.x()
 <button onclick='alert(this.tagname)'>click me</button>//will show the button itself
 
 //this inside class and constructor
+
+//Output Question
+1. const user={
+    name:"Amit",
+    age:123,
+    getData(){
+        console.log(this.name+" "+this.age)
+    }
+}
+user.getData()//Amit 123
+
+
+// 2. const user={
+//     name:"Amit",
+//     age:123,
+//     childObj:{
+//         newname:"Amut",
+//         getData(){
+//         console.log(this.name+" "+this.newname)
+//     }
+//     }
+    
+// }
+// user.childObj.getData()//undefined Amut
+
+// 3. Question
+function  makeUser(){
+    return{
+        name:"John",
+        ref:this,
+    }
+}
+let user=makeUser();
+
+console.log(user.ref.name)//undefined   because this keyword is not referring to the user object referring to the global object
+
+// ANSWER 
+ to correct it we can use as a method of an object
+ function  makeUser(){
+    return{
+        name:"John",
+        ref(){
+            return this
+        }
+    }
+}
+let user=makeUser();
+
+console.log(user.ref().name)
+
+// 4.Question
+// const user={
+//     name:"Amit Verma",
+//     logMessage(){
+//         console.log(this.name)//undefined
+//     }
+// }
+// setTimeout(user.logMessage,1000)
+// ANSWER
+
+const user={
+    name:"Amit Verma",
+    logMessage(){
+        console.log(this.name)
+    }
+}
+setTimeout(function(){
+    user.logMessage()
+},1000)//Amit Verma
+
+//6. Craete an object calculator with methods
+// Question:
+// let calculator={
+//     //..your code
+// }
+
+// calculator.read()
+// console.log(calculator.sum())
+// console.log(calculator.mul())
+
+// Answer:
+// let calculator={
+//     read(){
+//         this.a=+prompt("a=",0)
+//         this.b=+prompt("b=",0)
+//     },
+//     sum(){
+//         return this.a+this.b
+//     },
+//     mul(){
+//         return this.a*this.b
+//     }
+// }
+
+// calculator.read()
+// console.log(calculator.sum())
+// console.log(calculator.mul())

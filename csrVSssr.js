@@ -1,6 +1,6 @@
 // What is Client-Side Rendering (CSR)?
 // - Means that browser(client) is responsible for rendering the content using JS
-// - the server sends the barebones(only html with id ) HTML files and then JS takes over it to render the rest of 
+// - the server sends the barebones(only html with id ) HTML files and then JS takes over it to render the rest of
 // the page in browser
 // -----------------------------------------------------
 // 2. What happens in CSR?
@@ -9,6 +9,13 @@
 // c. The server responds with basic html (ofter with <div id="root"/>)
 // d. the broser will now download the Javasvript files like(bundle.js )
 // e. the JS runs in the browser,builds the ui, and injects it into the HTML dynamically.
+// -----
+// The server sends a mostly empty HTML page.
+
+// Your browser uses JavaScript to build and show the page.
+
+// It takes a bit longer to see the page because your browser is doing all the work.
+// --------/
 // -------------------------------------------
 // Tools that use CSR:
 // React (with CRA – Create React App)
@@ -26,9 +33,9 @@
 // 3. Can be heavy on low-end devices
 
 // ------------------------------------------------------------------------------------
-                //    SERVER SIDE RENDERING
+//    SERVER SIDE RENDERING
 
-// What is Server-Side Rendering (SSR)?               
+// What is Server-Side Rendering (SSR)?
 // HTML is rendered on the server, not in the browser
 
 // When a user visits a website:
@@ -36,7 +43,14 @@
 // 1. The browser requests a page.
 // 2. The server processes everything (data fetching, templating, rendering).
 // 3. The server sends back a fully rendered HTML page.
-// 4. The browser simply displays it. 
+// 4. The browser simply displays it.
+// --------------
+// The server builds the full page and sends it to your browser.
+
+// You see the page faster because it's already made.
+
+// Your browser doesn’t need to build much.
+// ---------------------
 // ------------------------
 // Flow of SSR:
 // User → Server → HTML (already rendered) → Browser shows content

@@ -7,7 +7,6 @@
 // 2. fulfilled-operation was completed succesfully
 // 3. rejected-operation failed
 
-
 // const promiseOne=new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
 //         console.log("Async Task Complete")
@@ -38,7 +37,6 @@
 //     console.log(user)
 // })
 
-
 //////////////////////////////////////////////////////////////////////////////////////////
 // const promiseFour=new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
@@ -48,7 +46,7 @@
 //         } else {
 //             reject("ERROR: Something went wrong")
 //         }
-//    
+//
 // })
 // promiseFour.then((user)=>{
 //     return (user.username)
@@ -81,7 +79,6 @@
 // }
 // consumePromise()
 
-
 ////////////////////////////////////////////////////
 
 // async  function getAllUsers(){
@@ -89,7 +86,7 @@
 //         const response=await fetch('https://jsonplaceholder.typicode.com/users');
 //             const data=await response.json()
 //             console.log(data)
-        
+
 //     } catch (error) {
 //         console.log("E",error)
 //     }
@@ -105,30 +102,31 @@
 //     console.log(error)
 // })
 
-
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((response)=>{
-    return response.json()
-}).then((data)=>{
-    console.log(data)
-}).catch((error)=>{
-    console.log(error)
-})
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 // ------------------------
 
-setTimeout(() => console.log('setTimeout'),0);
+setTimeout(() => console.log("setTimeout"), 0);
 
 const promise = new Promise((resolve) => {
- console.log('promis executor start');
- resolve('Promise resolved');
+  console.log("promis executor start");
+  resolve("Promise resolved");
 });
 
 promise
- .then((result) => {
- console.log(result);
- setTimeout(() => console.log('set Timeout inside Promisse .then'), 0);
- })
- .then (() => console.log('Chained then'));
+  .then((result) => {
+    console.log(result);
+    setTimeout(() => console.log("set Timeout inside Promisse .then"), 0);
+  })
+  .then(() => console.log("Chained then"));
 
 console.log("End of script");
 
@@ -144,14 +142,14 @@ console.log("End of script");
 // //  .then() blocks and go to the .catch().
 
 // 5. Q: What is the purpose of setTimeout inside the Promise?
-// It simulates an asynchronous task, such as an API call. It's commonly used to delay execution 
+// It simulates an asynchronous task, such as an API call. It's commonly used to delay execution
 // or mimic async behavior in demos
 
 // INTERVIEW QUESTIONS (Advanced-Level)
 // 1. Q: Is the .then() chain synchronous or asynchronous? How does the JavaScript event loop handle it?
 // A. .then() chain is  asyncronous.Even though it looka like a sync then .then() callback are queued
 // in the microtask que and they execute after the current statck is empty
-// The setTimeout callback is placed in the macrotask queue, so its execution is slightly delayed, then 
+// The setTimeout callback is placed in the macrotask queue, so its execution is slightly delayed, then
 // .then() gets scheduled after resolution.
 
 // 3. Q: Can you explain promise chaining and how values are passed between .then() blocks?
@@ -172,12 +170,11 @@ console.log("End of script");
 // 4. Promise.any()         => Returns first settled(ignore rejection)
 
 // 7. Q: How is error propagation handled in promise chains?
-// - If an error is thrown a promise is rejectd,it bubbled down the chain until the first .catch() 
+// - If an error is thrown a promise is rejectd,it bubbled down the chain until the first .catch()
 // catch it.If no catch is found it becomes unhandled promise rejection
 
-
 // Q: Why does .then() return a new Promise?
-// - .the() return a new Promise so that you can chain multiple async operation and handle their 
+// - .the() return a new Promise so that you can chain multiple async operation and handle their
 // results or error sequentially
 
 // It gives you full control over what to do next — whether that’s returning a transformed value,
@@ -189,3 +186,191 @@ console.log("End of script");
 // 2. Async control: You can return new Promises and wait for them.
 // 3. Error handling: One .catch() at the end handles errors from any .then().
 
+//Interview Question
+
+// 1. Question
+console.log("Start");
+
+function importantAction(username) {
+  setTimeout(() => {
+    return `Subscribe to ${username}`;
+  }, 1000);
+}
+const message = importantAction("RoadSide Coder");
+
+console.log(message);
+
+console.log("Stop");
+// o / p -
+//  Start;
+// undefined;
+// Stop;
+//Answer
+
+console.log("Start");
+
+function importantAction(username, cb) {
+  setTimeout(() => {
+    cb(`Subscribe to ${username}`);
+  }, 1000);
+}
+const message = importantAction("RoadSide Coder", function (message) {
+  console.log(message);
+});
+
+console.log("Stop");
+o / p;
+// Start
+// Stop
+// Subscribe to RoadSide Coder
+
+// 2.
+// console.log("Start");
+
+// const promiseOne = new Promise((resolve, reject) => {
+//   console.log(1);
+//   resolve(2);
+// });
+// promiseOne.then((res) => {
+//   console.log(res);
+// });
+// console.log("end");
+
+// o / p -
+//  Start;
+// 1;
+// end;
+// 2;
+
+// 3. console.log("Start")
+
+// const promiseOne=new Promise((resolve,reject)=>{
+//     console.log(1)
+//     resolve(2)
+//     console.log(3)
+// })
+// promiseOne.then((res)=>{
+//     console.log(res)
+// })
+// console.log("end")
+
+// o/p
+// Start;
+// 1;
+// 3;
+// end;
+// 2;
+
+// 4. console.log("Start")
+
+// const promiseOne=new Promise((resolve,reject)=>{
+//     console.log(1)
+//here resolve is remloved
+//     console.log(3)
+// })
+// promiseOne.then((res)=>{
+//     console.log(res)
+// })
+// console.log("end")
+
+// o/p
+// Start;
+// 1;
+// 3;
+// end;
+
+// 5.
+// console.log("Start");
+
+// const fn = () =>
+//   new Promise((resolve, reject) => {
+//     console.log(1);
+//     resolve("Success");
+//   });
+
+// console.log("middle");
+
+// then((res) => {
+//   console.log(res);
+// });
+// console.log("end");
+
+// o/p=
+// Start
+// middle
+// 1
+// end
+// Success
+
+// 6. function job(){
+//   return new Promise(function(resolve,reject){
+//       reject();
+//   })
+// }
+// let promise=job();
+
+// promise.then(function (){
+//   console.log("Success 1")
+// }).then(function (){
+//   console.log("Success 2")
+// }).then(function (){
+//   console.log("Success 2")
+// }).catch(function (){
+//   console.log("Error")
+// }).then(function (){
+//   console.log("Success 4")
+// })
+o/p 
+Error
+Success 4
+
+// 7. 
+// function  job(state){
+//   return new Promise(function(resolve,reject){
+//       if(state){
+//           resolve("Success");
+//       }else{
+//           reject("error")
+//       }
+//   })
+// }
+// let promise=job(true);
+
+// promise.then(function (data){
+//   console.log(data)
+  
+//   return job(false)
+// })
+// .catch(function (error){
+//   console.log(error);
+  
+//   return "Error caught"
+// })
+// .then(function (data){
+//   console.log(data)
+//   return job(true)
+// })
+// .catch(function (error){
+//   console.log(error)
+// })
+
+// o/p- 
+// Success
+// error
+// Error caught
+
+// 8. 
+// const firstPromise=new Promise((resolve,reject)=>{
+//   resolve("First !")
+// })
+// const SecondPromise=new Promise((resolve,reject)=>{
+//   resolve(firstPromise)
+// })
+// SecondPromise
+// .then((res)=>{
+//   return res
+// })
+// .then((res)=>console.log(res))
+
+// o/p
+// First !

@@ -57,3 +57,96 @@ Example of BInd method
 const handleClickAgain=(name)=>{
 console.log('hello',name)
 }
+
+//Interview Question
+1. 
+const person={
+    name:"Amit",
+    age:25
+}
+function printname(){
+    return `${this.name} is ${this.age}`
+}
+console.log(printname.call(person))//Amit is 25
+
+console.log(printname.bind(person))//[Function: bound printname]
+
+
+2. 
+var status="Hi";
+
+setTimeout(()=>{
+    const status="Hello"
+    
+    const data={
+        status:"Amit",
+        getStatus(){
+            return this.status
+        }
+    }
+    console.log(data.getStatus())//Amit
+    console.log(data.getStatus.call(this))//Hi
+},0)
+
+// 3. Question 
+const animals=[
+    {species:"Lion",name:"King"},
+    {species:"whale",name:"queen"},
+    ];
+    
+function printAnimals(i){
+    this.print=function(){
+        console.log("#"+i+" "+this.species+":"+this.name)
+    }
+    this.print()
+}
+//Answer
+const animals=[
+    {species:"Lion",name:"King"},
+    {species:"whale",name:"queen"},
+    ];
+    
+function printAnimals(i){
+    this.print=function(){
+        console.log("#"+i+" "+this.species+":"+this.name)
+    }
+    this.print()
+}
+for(let i=0;i<animals.length;i++){
+    printAnimals.call(animals[i],i)
+}
+#0 Lion:King
+#1 whale:queen
+
+
+// 4. Question
+// Append an array to another Array 
+// const array=["a","b"]
+// const elemets=[0,1,2]
+
+// Answer
+// const array=["a","b"]
+// const elements=[0,1,2]
+// array.push.apply(array,elements)
+// console.log(array)
+
+// 5. Question 
+// Uisng apply to enhance built in function
+// Answer
+// const numbers=[43,7,3,8,3,8]
+// console.log(Math.max.apply(null,numbers))
+
+// 6.  const age=10;
+ 
+// var person ={
+//     name:"Piyush",
+//     age:20,
+//     getArrow:()=>console.log(this),
+//     getAge:function(){
+//         console.log(this.age)
+//     },
+// };
+// var person2={age:30};
+
+// person.getArrow.call(person2)//undefined
+// person.getAge.call(person2)//30
