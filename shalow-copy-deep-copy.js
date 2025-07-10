@@ -1,3 +1,32 @@
+const originalObj={
+    name:"amit",
+    address:{
+        city:"Jsr"
+    }
+}
+// const shallowCopy={...originalObj}
+// console.log(shallowCopy)
+// const shallowCopy=Object.assign({},originalObj)
+// console.log(shallowCopy)
+
+originalObj.address.city="Blr"
+// console.log(shallow)//name changed in shallow copy//Blr
+
+let deepCopy=JSON.parse(JSON.stringify(originalObj))
+// console.log(deepCopy)
+// deepCopy.address.city
+console.log(deepCopy)//jsr
+
+
+
+
+
+
+
+
+
+
+
 // let obj={
 //     name:"peter"
 // }
@@ -89,3 +118,28 @@ DEEP copy
 
 2. to resolve data and function you can use loadash library 
 3. manualy u can also resolve using for loop inside that copy key to first object the second object
+
+
+
+
+
+console.log(add(3,4));   // Outputs 7
+console.log(add(3)(4));  // Outputs 7
+
+function add(x){
+   return function(y){
+   return x+y
+}
+}
+console.log(add(3,4));   // Outputs 7
+console.log(add(3)(4));  // Outputs 7
+
+
+
+function add(x,y){
+  return function()
+     return x+y
+
+}
+ console.log(add(3,4));   // Outputs 7
+console.log(add(3)(4));  // Outputs 7

@@ -12,11 +12,10 @@
 const numbers = [1, 2, 3, 4, 5];
 
 // Higher-order function: map() takes a function as an argument
-const squared = numbers.map(num => num * num);
+const squared = numbers.map((num) => num * num);
 console.log(squared); // [1, 4, 9, 16, 25]
 
 // Here, map() is a higher-order function because it takes a function (num => num * num) as an argument.
-
 
 // ---------------------------------------------------------------------------------
 
@@ -31,3 +30,15 @@ console.log(squared); // [1, 4, 9, 16, 25]
 // This is an example of currying.
 
 // -----------------------------------------------------------------------------
+// Example of higher order function
+
+// function greet(name) {
+//     return `Hello, ${name}!`;
+//   }
+
+//   function processUser(name, callback) {
+//     // callback is a function passed as an argument
+//     console.log(callback(name));
+//   }
+
+//   processUser("Amit", greet);

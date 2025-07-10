@@ -6,23 +6,6 @@ function add(a){
     }
 }
 console.log(add(2)(3)(4))
-
-////////////////////////////////////////////////////////////////////////
-✅ Currying: The process of breaking down a function with multiple parameters into a series of unary functions.
-✅ Closures: Each function retains access to the variables from its outer function.
-
-// Higher-order function returning another function
-const higherOrder = n => {
-    const doSomething = m => {
-      const doWhatEver = t => {
-        return 2 * n + 3 * m + t;
-      }
-      return doWhatEver;
-    }
-    return doSomething;
-  }
-  // Calling the function
-  console.log(higherOrder(2)(3)(10));
   
   // Why Use Currying?
   // 1. Reusability: You can partially apply a function.
@@ -91,6 +74,19 @@ function sum(a){
     }
 }
 console.log(sum(2)(3)(4)(2)())
+
+
+
+function sum(a){
+    let total=a;
+     function inner(b){
+         if(typeof b ==="undefined" ) return total;
+         total+=b
+         return inner
+     }
+     return inner
+}
+console.log(sum(1)(2)(4)())
 // ------------------------------
 Question 4. Currying vs Partial Application
 Question 5. Manupulationg DOM
@@ -105,3 +101,19 @@ function updateElementText(id){
 }
 const updateHeader=updateElementText("heading")
 updateHeader("Hello Amit")
+
+
+///////////////////////////////////////////////////////
+
+function add(a,b){
+    if (b) return a+b;
+    else{
+        return function (b){
+            return a
+        }
+    }
+}
+
+ console.log(add(3)(4))
+console.log(add(2,3))
+
