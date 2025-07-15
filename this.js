@@ -152,6 +152,9 @@ const user={
 setTimeout(function(){
     user.logMessage()
 },1000)//Amit Verma
+OR
+setTimeout(()=>user.logMessage(),1000)
+
 
 //6. Craete an object calculator with methods
 // Question:
