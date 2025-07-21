@@ -1,3 +1,4 @@
+//we use closure for data hiding
 function x(){
     var a=10;
     function y(){
@@ -19,6 +20,8 @@ z()
 
 //Closure is the combination of a function and its lexical scope bundled together with reference 
 //to its surroundings state(the lexical environment).
+
+
 
 //  In other words, a closure gives a function access to its outer scope. 
 // ------------------------
