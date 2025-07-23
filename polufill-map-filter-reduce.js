@@ -39,3 +39,24 @@
 // };
 // let arr = [2, 3, 4];
 // console.log(arr.myArray((ele) => ele * 2));
+
+/////////////////////filter-polyfil///////////////////////
+
+// const res=[2,3,4,5]
+// const arr=res.filter((ele)=>ele>3)
+// console.log(arr)
+
+// Array.prototype.myArray=function(callback,thisArg){
+//     let result=[];
+//     for(let i=0;i<this.length;i++){
+//      if(i in this){
+//        if(callback.call(thisArg,this[i],i,this)){
+//          result.push(this[i])
+//        }
+//      }
+//     }
+//     return result
+//   }
+
+//   let arr=[2,3,4,5];
+//   console.log(arr.myArray((ele)=>ele>3))
