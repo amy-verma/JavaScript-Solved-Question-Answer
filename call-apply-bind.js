@@ -88,6 +88,23 @@ setTimeout(()=>{
     console.log(data.getStatus.call(this))//Hi
 },0)
 
+//////////////////////////////////////////////////////
+
+// Q. let age=10;
+
+// let person={
+//   name:"Piyush",
+//   age:20,
+//   getAge:function(){
+//     return this.age
+//   }
+// }
+
+// var person2={age:24}
+// console.log(person.getAge.call(person2))//24
+
+/////////////////////////////////////////////////////
+
 // 3. Question 
 const animals=[
     {species:"Lion",name:"King"},
