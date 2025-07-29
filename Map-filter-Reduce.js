@@ -20,6 +20,7 @@
 
 // 3. Reduce takes a callBACK function and an initial value 
 // and in callBACK we take (acc, curr , i , arr)
+// Array.reduce((acc,curr,i,arr)=>{},initailValue)
 
 // const num=[1,2,4]
 // const res=num.reduce((acc,num,i,arr)=>{
@@ -30,34 +31,51 @@
 
 // Polyfill for MAp-------
 
-Array.prototype.myMap=function(callback){
-  let result=[]
-  for(let i=0;i<this.length;i++){
-    result.push(callback(this[i],i,this))
-  }
-  return result
-}
-let res=arr.myMap((ele)=>{
-  return ele*2
-})
-console.log(res)
+// Array.prototype.myMap=function(callback){
+//   let result=[]
+//   for(let i=0;i<this.length;i++){
+//     result.push(callback(this[i],i,this))
+//   }
+//   return result
+// }
+// let res=arr.myMap((ele)=>{
+//   return ele*2
+// })
+// console.log(res)
 
-// --------------------------------Polyfil- filter
+// --------------------------------Polyfil- filter--------------
 
- let arr=[1,2,4,5,6]
-// // let mul=arr.map((ele,index,arr)=>{ return ele*2+index})
-// // console.log(mul)
-Array.prototype.myFilter=function(cb){
-  let temp=[];
-  for(let i=0;i<this.length;i++){
-    if(cb(this[i],i,arr)){
-      temp.push(this[i])
-    }
-  }
-  return temp
-}
-let res=arr.myFilter((ele)=>{
-  return ele>3
-})
+//  let arr=[1,2,4,5,6]
+// // // let mul=arr.map((ele,index,arr)=>{ return ele*2+index})
+// // // console.log(mul)
+// Array.prototype.myFilter=function(cb){
+//   let temp=[];
+//   for(let i=0;i<this.length;i++){
+//     if(cb(this[i],i,arr)){
+//       temp.push(this[i])
+//     }
+//   }
+//   return temp
+// }
+// let res=arr.myFilter((ele)=>{
+//   return ele>3
+// })
 
-console.log(res)
+// console.log(res)
+
+// ------------------------------Reduce - Polyfil----------
+
+//  let arr=[1,2,4,5,6]
+
+// Array.prototype.myReduce=function(cb,initalValue){
+//   let accumulator=initalValue;
+  
+//   for(let i=0;i<this.length;i++){
+//     accumulator=accumulator? cb(accumulator,this[i],i,this):this[i]
+//   }
+//   return accumulator
+// }
+// let res=arr.myReduce((acc,curr,i,arr)=>{
+//   return acc+curr
+// },0)
+// console.log(res)
