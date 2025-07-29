@@ -79,3 +79,100 @@
 //   return acc+curr
 // },0)
 // console.log(res)
+
+
+// Question 1. Map vs Foreach 
+
+// const arr=[2,5,6,9]
+
+// const mapResult=arr.map((ele)=>{
+//     return ele*2
+// }).filter
+
+// const forEachResult=arr.forEach((ele)=>{
+//     return ele+2
+// })
+// console.log(mapResult,forEachResult)
+// in for Each to modify the original array
+
+
+// const forEachResult=arr.forEach((ele,i)=>{
+//     arr[i]=ele+3
+// })
+// console.log(forEachResult,arr)
+
+
+//map,filter,reduce O/P Based uestion
+//Display the only names in upper Case
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},]
+
+// let names=[]
+// for(let i=0;i<students.length;i++){
+//   names.push(students[i].name.toUpperCase())
+// }
+// console.log(names)
+
+// let res=students.map((ele)=>{
+//   return ele.name.toUpperCase()
+// })
+// console.log(res)
+
+// Question 3 Return only the details of those who scored more than 60
+
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},]
+
+// let res=students.filter((ele)=>{
+//   return ele.marks>60
+// })
+// console.log(res)
+
+// Question 4. Marks greater then 60 and rollno >15
+
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},]
+
+// let res=students.filter((ele)=>{
+//   return ele.rollnumber>15 && ele.marks>60
+// })
+// console.log(res)
+
+// Question 5. 
+
+// Sum of marks of all the students
+
+
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},]
+
+// let res=students.reduce((acc,curr)=>{
+//   return acc+curr.marks
+// },0)
+// // console.log(res)
+
+// Question 5. Return total marks of students with marks greater then 60 after 20 marks have been 
+// added to those who scored less the 60
+
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},]
+
+// let res=students.map((ele)=>{
+//   if(ele.marks<60){
+//      ele.marks+=20
+//   }
+//   return ele
+// }).filter((ele)=>ele.marks>60).reduce((acc,curr)=>{
+//   return acc+curr.marks
+// },0)
+// console.log(res)
