@@ -13,3 +13,18 @@ Q. Why did React need Fiber?
 
 Question. What does Fiber do better?
 
+Fiber allows React to
+
+1.  Split work into chunk
+- Think of rendering like a bigtask ,Fiber split it into smaller task that React can pause and resume.This is called Inceremental Rendering.
+
+- This way, React can pause to handle to handle more important things like animation and user input
+then continue Rendering.
+
+2. Prioritize updates
+- Not all updates are equaly important. If the user clicks a button, that updates should happen 
+faster than somtimes less urgent like a  background animation.
+
+3.  Handle errors better
+-With fiber raect can handle error during rendering more gracefully.It intriducess error 
+boundaries.so the whole app doesn't crash if one part  fails.
