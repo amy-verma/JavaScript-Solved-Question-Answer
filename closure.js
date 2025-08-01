@@ -122,6 +122,12 @@ for(var i=0;i<3;i++){
     },i*1)
 }  
 
+// points to remember
+// 1. i === 3 only after the loop has finished.
+// 2. But all your setTimeout callbacks are still waiting to run.
+// 3. So when they finally run, the shared var i has value 3, because that’s what it was left at.
+
+
 Answer: 
 
 for(var i=0;i<3;i++){
