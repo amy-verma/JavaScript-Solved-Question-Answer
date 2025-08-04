@@ -183,3 +183,15 @@ setTimeout(()=>user.logMessage(),1000)
 // calculator.read()
 // console.log(calculator.sum())
 // console.log(calculator.mul())
+
+// Interview Question
+const person = {
+  name: "Rahul",
+  greet() {
+    console.log(`Hi, I am ${this.name}`);
+  },
+};
+ 
+ let res=person.greet
+res()//i am undefined
+ 
