@@ -85,7 +85,7 @@ setTimeout(()=>{
         }
     }
     console.log(data.getStatus())//Amit
-    console.log(data.getStatus.call(this))//Hi
+    console.log(data.getStatus.call(this))
 },0)
 
 //////////////////////////////////////////////////////

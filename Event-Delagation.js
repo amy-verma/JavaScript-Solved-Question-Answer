@@ -1,7 +1,7 @@
 // Q . What is Event Delegation?
 // - is a technique where single event listner is attached to a perent elment and it handles events from 
 // its child elements.
-// - This works because of event bubbling-when an event happens pn a child, it bubbles up through its ancestors
+// - This works because of event bubbling-when an event happens on a child, it bubbles up through its ancestors
 // - Instead of adding event listners to every child element you delegate  handling to their common parent
 
 

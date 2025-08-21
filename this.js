@@ -185,13 +185,13 @@ setTimeout(()=>user.logMessage(),1000)
 // console.log(calculator.mul())
 
 // Interview Question
-const person = {
-  name: "Rahul",
-  greet() {
-    console.log(`Hi, I am ${this.name}`);
-  },
-};
+// const person = {
+//   name: "Rahul",
+//   greet() {
+//     console.log(`Hi, I am ${this.name}`);
+//   },
+// };
  
- let res=person.greet
-res()//i am undefined
+//  let res=person.greet
+// res()//i am undefined
  

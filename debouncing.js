@@ -39,5 +39,4 @@ function debounce(fn,d){
     }
 }
 
-
 const betterFunction=debounce(getData,2000)

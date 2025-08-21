@@ -35,4 +35,3 @@ How it works:
 Pros:
 Doesn’t block HTML parsing
 Preserves script order — scripts are executed in the order they appear in HTML.
-

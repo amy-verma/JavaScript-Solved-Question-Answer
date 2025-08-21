@@ -46,7 +46,7 @@
 // --------------------------------Polyfil- filter--------------
 
 //  let arr=[1,2,4,5,6]
-// // // let mul=arr.map((ele,index,arr)=>{ return ele*2+index})
+// let mul=arr.map((ele,index,arr)=>{ return ele*2+index})
 // // // console.log(mul)
 // Array.prototype.myFilter=function(cb){
 //   let temp=[];
