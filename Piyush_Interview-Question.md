@@ -2,7 +2,6 @@ Q.  Why do closures exist in JavaScript?
 - Closures exist in js because they provide a way for function to "remember" and access their lexical 
  scope even after the function has finished executing. 
 
-
 function outer(){
     let x=10;
     function inner(){
