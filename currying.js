@@ -22,6 +22,17 @@ console.log(add(2)(3)(4))
 // A. It helps to avoid passing the same variable again and again
 //   - It makes the function pure which makes it expose to less errors and side effects
 // ---------------------------
+
+// // Why is Currying Useful?
+// 1. Partial Application: Currying allows you to "fix" a certain number of arguments for a function 
+//    and leave the rest to be provided later. This is known as partial application.
+
+// const addTen = add(10);  // Currying to create a new function that always adds 10.
+// console.log(addTen(5));   // 15
+
+// 2. Reusability:
+// 3. Cleaner and More Maintainable Code:
+// 4. Function Chaining:
 Question 1. sum(2)(3)(4)(5)
 
 // sum(2)(6)(1)
