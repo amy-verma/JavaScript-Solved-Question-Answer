@@ -33,7 +33,8 @@ console.log(add(2)(3)(4))
 // 2. Reusability:
 // 3. Cleaner and More Maintainable Code:
 // 4. Function Chaining:
-Question 1. sum(2)(3)(4)(5)
+
+// Question 1. sum(2)(3)(4)(5)
 
 // sum(2)(6)(1)
 
@@ -75,8 +76,9 @@ console.log(mul(2)(5))
 // console.log(evaluate("multiply")(2)(3))
 // -----------------------------------------------
 
-Question 3.Infinite Currying 
-sum(1)(2)(3)...(n)
+// Question 3.Infinite Currying 
+
+// sum(1)(2)(3)...(n)
 
 function sum(a){
     return function(b){
@@ -99,10 +101,10 @@ function sum(a){
 }
 console.log(sum(1)(2)(4)())
 // ------------------------------
-Question 4. Currying vs Partial Application
-Question 5. Manupulationg DOM
+// Question 4. Currying vs Partial Application
+// Question 5. Manupulationg DOM
 
-    <h1 id="heading">Amit</h1>
+    // <h1 id="heading">Amit</h1>
 
 
 function updateElementText(id){
