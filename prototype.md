@@ -1,3 +1,7 @@
+- In js every object has an internal link to another object called its prototype.
+- When you try to access a property on an object,and it is not found, js looka up the chain to its
+ prototype-this is called prototype chain.
+
 1. Js has a default behaviour i:e  prototypal behaviour
 2.  Due to this behaviour we have this keeyword working.
 3. Inside arrow function we dont't have access to this keyword is due to prototype come there.
