@@ -1,3 +1,5 @@
+// - Object.assign() and spread SyntaxError(...) are used to copy properties from one object to another
+// - Both do a shallow copy, so nested objects are not deeply cloned.
 const originalObj={
     name:"amit",
     address:{
