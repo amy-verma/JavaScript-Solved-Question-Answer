@@ -167,12 +167,17 @@
 // {name:"Kaushal",rollnumber:16,marks:35},
 // {name:"Dilpreet",rollnumber:6,marks:55},]
 
+// let students=[{name:"Piyush",rollnumber:30,marks:80},
+// {name:"Jenny",rollnumber:15,marks:69},
+// {name:"Kaushal",rollnumber:16,marks:35},
+// {name:"Dilpreet",rollnumber:6,marks:55},
+// ]
 // let res=students.map((ele)=>{
-//   if(ele.marks<60){
-//      ele.marks+=20
-//   }
+//  if(ele.marks<60){
+//    ele.marks+=20
+//  }
 //   return ele
-// }).filter((ele)=>ele.marks>60).reduce((acc,curr)=>{
+// }).reduce((acc,curr)=>{
 //   return acc+curr.marks
 // },0)
 // console.log(res)
