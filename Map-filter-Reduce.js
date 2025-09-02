@@ -67,18 +67,20 @@
 
 //  let arr=[1,2,4,5,6]
 
-// Array.prototype.myReduce=function(cb,initalValue){
-//   let accumulator=initalValue;
-  
+
+// Array.prototype.myReduce=function(cb,initialValue){
+//   let accumulator=initialValue;
 //   for(let i=0;i<this.length;i++){
-//     accumulator=accumulator? cb(accumulator,this[i],i,this):this[i]
+//     accumulator=accumulator? (cb(accumulator,this[i],i,this)):this[i]
 //   }
 //   return accumulator
 // }
-// let res=arr.myReduce((acc,curr,i,arr)=>{
+// const arr=[2,3,4,5]
+// let res=arr.myReduce((acc,curr)=>{
 //   return acc+curr
 // },0)
 // console.log(res)
+
 
 
 // Question 1. Map vs Foreach 
