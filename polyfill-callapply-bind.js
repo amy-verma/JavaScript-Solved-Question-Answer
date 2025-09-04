@@ -21,7 +21,7 @@ printfullname.myObject(person, 28);
 
 // ---------------------Polyfill for Apply--------------
 
-let name = {
+let name2 = {
   firstname: "amit",
   lastname: "verma",
 };
