@@ -46,17 +46,18 @@
 // const arr=res.filter((ele)=>ele>3)
 // console.log(arr)
 
-// Array.prototype.myArray=function(callback,thisArg){
-//     let result=[];
-//     for(let i=0;i<this.length;i++){
-//      if(i in this){
-//        if(callback.call(thisArg,this[i],i,this)){
-//          result.push(this[i])
-//        }
-//      }
+// Array.prototype.myFilter=function(cb){
+//   let result=[];
+//   for(let i=0;i<this.length;i++){
+//     if(cb(this[i],i,this)){
+//       result.push(this[i])
 //     }
-//     return result
 //   }
+//   return result
+// }
 
-//   let arr=[2,3,4,5];
-//   console.log(arr.myArray((ele)=>ele>3))
+// let arr=[2,3,4,5,3];
+// let res=arr.myFilter((ele)=>{
+//   return ele>3
+// })
+// console.log(res)
