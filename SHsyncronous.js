@@ -57,15 +57,10 @@ getData(1,()=>{  //1 after 2 sec
 })
 
 
-                            Promise
+//                                 fetch API
 
-is an object for js
-solution to callback hell 
+// The fetch API provides an interface for fetching(sending/recieving) resources.
 
-                                fetch API
+// It uses request and response object
 
-The fetch API provides an interface for fetching(sending/recieving) resources.
-
-It uses request and response object
-
-the fetch() method is used to fetch a resource(data)
+// the fetch() method is used to fetch a resource(data)
