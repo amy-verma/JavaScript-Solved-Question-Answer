@@ -24,3 +24,15 @@ function sayBye() {
   console.log("bye");
 }
 greetUser(sayBye);
+
+// Types of Callback Functions
+
+// 1. Named Callback
+
+// function sayHi() {
+//   console.log("Hi!");
+// }
+
+// setTimeout(sayHi, 1000); // Named function as callback
+
+// 2. Synchronous Callback
