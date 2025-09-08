@@ -17,7 +17,7 @@ function square(num) {
 //     },i*1000)
 // }
 
-Q3. Function hoisting o/p questipon
+// Q3. Function hoisting o/p questipon
 // var x=21
 // var fun=function (){
 //     console.log(x)
