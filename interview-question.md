@@ -78,6 +78,12 @@ function sayHello() {       //Returning a function from another function
 
 4. Explain how `==` and `===` differ.
 
+| Operator | Name                               | Compares           | Performs Type Conversion? |
+| -------- | ---------------------------------- | ------------------ | ------------------------- |
+| `==`     | Loose Equality / Abstract Equality | Value only         | ✅ Yes                     |
+| `===`    | Strict Equality                    | Value **and** Type | ❌ No                      |
+
+
 5. What is a closure?
 ->Closure is the combination of a function bundled together with reference to its surroundings state(the lexical 
 environment).
