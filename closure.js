@@ -1,8 +1,12 @@
 //we use closure for data hiding
+
+
+
+var e=10;//global scope
 function x(){
-    var a=10;
+    var a=10;//outer scope
     function y(){
-        console.log(a);
+        console.log(a);//local scope
     }
     return y;
 }
@@ -28,10 +32,30 @@ z()
 // Function makes it possible for a fuction to have a private behaviour
 
 // Key Concept: Scope Chain & Closures
+// - Every closure has 3 scopes 
 
 // 1. Local Scope(inside a function)
 // 2. Outer Scope (if nested)
 // 3. Global Scope(if not found in any parent scope)
+
+
+
+// var e=10;//global scope
+// function add(a){
+//   return function(b){
+//     return function(c){
+            //outer function scope
+//       return function(d){
+            //local scope
+//         return a+b+c+d+e
+//       }
+//     }
+//   }
+// }
+// console.log(add(2)(3)(4)(4))//nested function with closures
+
+
+
 // --------------------------
     //    INTERVIEW QUESTION IN  JS
 
@@ -131,7 +155,7 @@ for(var i=0;i<3;i++){
 Answer: 
 
 for(var i=0;i<3;i++){
-    function inner(i){
+    function inner(i){//here it is create using closure
           setTimeout(()=>{
         console.log(i)
     },i*1)
