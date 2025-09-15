@@ -36,3 +36,12 @@ greetUser(sayBye);
 // setTimeout(sayHi, 1000); // Named function as callback
 
 // 2. Synchronous Callback
+
+// ⏳ Why Use Callback Functions?
+
+// | Use Case                    | Description                                                                    |
+// | --------------------------- | ------------------------------------------------------------------------------ |
+// | **Asynchronous operations** | Run code **after** an async task completes (e.g., API calls, timers, file I/O) |
+// | **Event handling**          | Reacting to user input (e.g., button clicks, form submits)                     |
+// | **Custom logic injection**  | Let a function be reused with different behaviors                              |
+// | **Functional programming**  | Map, filter, reduce, etc., all use callbacks                                   |
