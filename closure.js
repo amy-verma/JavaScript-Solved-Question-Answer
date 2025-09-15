@@ -1,7 +1,5 @@
 //we use closure for data hiding
 
-
-
 var e=10;//global scope
 function x(){
     var a=10;//outer scope
