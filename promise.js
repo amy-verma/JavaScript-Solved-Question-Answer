@@ -374,3 +374,18 @@ Success 4
 
 // o/p
 // First !
+
+
+// Q. create a sleep function in JavaScript and use it to sleep for 3 seconds
+
+// function sleep(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// async function example() {
+//   console.log("Before sleep");
+//   await sleep(2000); // waits 2 seconds
+//   console.log("After sleep");
+// }
+
+// example();
