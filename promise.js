@@ -404,3 +404,32 @@ Success 4
 // asyncFunc();
 
 // console.log("D");//A,B,D,C
+
+
+
+
+// Question- see the difference between them
+
+// let user = {
+//   name: "John",
+
+//   toString() {
+//     return "Welcome, " + this.name;
+//   }
+// };
+// -----------------------------
+// console.log(user + “,”)//Welcome, John,
+
+// let user = {
+//   name: "John",
+
+//   greet() {
+//     return "Welcome, " + this.name;
+//   }
+// };
+
+// console.log(user + ",")[object Object],
+
+
+
+
