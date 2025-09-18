@@ -389,3 +389,18 @@ Success 4
 // }
 
 // example();
+
+
+
+// Question
+// console.log('A');
+
+// async function asyncFunc() {
+//   console.log('B');
+//   await new Promise(resolve => setTimeout(resolve, 0));
+//   console.log("C");
+// }
+
+// asyncFunc();
+
+// console.log("D");//A,B,D,C
