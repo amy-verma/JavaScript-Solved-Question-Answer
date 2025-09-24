@@ -3,7 +3,6 @@
 1. CORS stands for Cross-Origin Resource Sharing.
 2. It’s a security rule built into browsers that controls which websites can request data from another website’s server.
 
-
 🔹 Breaking it down with an example
 Imagine:
 - You are on website A → https://myapp.com
