@@ -14,5 +14,5 @@ var x=10;
 const name = 'Lydia';
 age = 21;
 
-console.log(delete name);//false
-console.log(delete age);//true
+// console.log(delete name);//false
+// console.log(delete age);//true
